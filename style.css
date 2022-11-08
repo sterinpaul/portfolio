@@ -9,8 +9,15 @@ body{
     height:100vh;
     background-color: gray;
 }
-.navbar-nav > li > a:hover{
-    color: rgb(8, 58, 165) !important;
+.navbar{
+    box-shadow: none !important;
+}
+.navbar-nav > li > a{
+    transition:.3s ease;
+}
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus{
+    color: rgb(9, 83, 241) !important;
+    text-shadow: 0 0 1rem white,0 0 1rem white,0 0 1rem white,0 0 1rem white;
 }
 @media (max-width:990px) {
     .navbar-nav{
@@ -27,6 +34,15 @@ body{
     }
     .services-container h1, .projects-container h1, .about-container h1, .resume-container h1, .contact-container h1{
         padding-top:1rem !important;
+    }
+    .about-wrapper{
+        width:95vw !important;
+    }
+    .about-wrapper p{
+        font-size: 1rem;
+    }
+    .resume-wrapper img{
+        width:80% !important;
     }
   }
 
@@ -269,6 +285,10 @@ body{
     line-height: 2.5rem;
     letter-spacing: .05rem;
 }
+.about-wrapper p span{
+    font-size: 2rem;
+    color:white;
+}
 
 /* Resume section */
 
@@ -293,7 +313,7 @@ body{
     padding-bottom:1rem;
 }
 .resume-wrapper img{
-    max-width:45%;
+    width:45%;
     display:block;
     margin:0 auto;
     box-shadow: 0 0 .2rem .1rem white;
