@@ -1,0 +1,352 @@
+*,*::before,*::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    width:100vw;
+    height:100vh;
+    background-color: gray;
+}
+.navbar-nav > li > a:hover{
+    color: rgb(8, 58, 165) !important;
+}
+@media (max-width:990px) {
+    .navbar-nav{
+      background: rgb(108, 107, 107);
+      display:inline-block;
+      margin-top:.4rem;
+    }
+    .navbar-nav li{
+        padding:0 3rem;
+        text-align: left;
+    }
+    #navbarNavDropdown{
+        text-align: right;
+    }
+    .services-container h1, .projects-container h1, .about-container h1, .resume-container h1, .contact-container h1{
+        padding-top:1rem !important;
+    }
+  }
+
+
+/* Home section */
+
+.home-container{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    background-image: linear-gradient(40deg,rgb(41, 39, 39),rgb(125, 121, 121));
+}
+.name-container{
+    width:80vw;
+    height:60vh;
+    background-color: rgb(211, 209, 209);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border:.3rem solid rgb(155, 199, 242);
+    border-radius: .3rem;
+    margin:0 auto;
+    overflow:hidden;
+}
+.name-container h1{
+    font-weight: 900;
+    font-family: sans-serif;
+    font-size: 2.9rem;
+    color:transparent;
+    background-image: linear-gradient(45deg,rgb(127, 200, 245) 30%,rgb(15, 85, 165) 50%,rgb(46, 213, 199) 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.name-container p{
+    font-weight: 50;
+    color:rgb(117, 116, 116);
+}
+
+/* Services section */
+
+.services-container{
+    width:100vw;
+    min-height:100vh;
+    height: max-content;
+    background-color: rgb(66, 94, 207);
+}
+.services-container h1{
+    color:white;
+    text-align: center;
+    padding-top:4rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: .2rem;
+}
+.span-letter{
+    font-size:3rem;
+    font-weight: 400;
+}
+.service-wrapper{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding:2rem;
+    gap:1rem;
+}
+.service-item{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width:17rem;
+    padding:0 1rem;
+    background-color:rgb(218, 213, 213);
+    cursor: pointer;
+    border-radius: .3rem;;
+}
+.service-item:hover .service-img-container div{
+    transform:scale(1.05);
+}
+.service-item p{
+    margin-top:1rem;
+    text-indent: 1rem;
+    font-weight: 300;
+}
+.service-item h2{
+    font-weight: 100;
+    max-width:11rem;
+}
+.service-img-container{
+    width:17rem;
+    overflow: hidden;
+}
+.service-img-container .first-img{
+    width:17rem;
+    height:20rem;
+    background-image: url("https://revenuesandprofits.com/wp-content/uploads/2020/09/pojmovi-u-web-dizajnu.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 40% 40%;
+    transition:1s ease;
+}
+.service-img-container .second-img{
+    width:17rem;
+    height:20rem;
+    background-image: url("https://www.digitalsilk.com/wp-content/uploads/2020/06/website-development-process-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 60% 50%;
+    transition:1s ease;
+}
+.service-img-container .third-img{
+    width:17rem;
+    height:20rem;
+    background-image: url("https://trcconsulting.org/dsaadmin/assets/img/blog/3-nov.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 40% 40%;
+    transition:1s ease;
+}
+
+/* Projects section */
+
+.projects-container{
+    width:100vw;
+    min-height:100vh;
+    height: max-content;
+    background-color: rgb(87, 88, 89);
+}
+.projects-container h1{
+    color:white;
+    text-align: center;
+    padding-top:4rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: .2rem;
+}
+.project-wrapper{
+    width:100vw;
+    padding:5rem 0;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.project-wrapper a{
+    text-decoration: none;
+}
+.project-item{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:2rem;
+    border-radius: .5rem;
+    /* box-shadow: 0 0 .1rem .3rem white; */
+}
+.project-img-container{
+    width:15rem;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.project-img-container div{
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cover{
+    position:relative;
+    top:-101%;
+    background-color: rgb(25, 87, 194);
+    color:white;
+    display:flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom:.5rem;
+    transition:1s ease;
+}
+.project-item:hover .cover{
+    top:-5rem;
+}
+
+#amazon{
+    background-image: url(https://d1.awsstatic.com/aws-key-pages/homepage-key-pages/customer-stories-logo/Amazon.934209dc860398008267c1c712ee41d83a50e451.jpg);
+}
+#rolex{
+    background-image: url(https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2020%2F11%2Frolex-a-z-modern-rolex-watch-guide-S.jpg?w=1600&cbr=1&q=90&fit=max);
+}
+#calculator{
+    background-image: url(https://www.thecalculatorsite.com/images/facebook-share-images/homepage.jpg);
+    background-position: -4.2rem;
+}
+#portfolio{
+    background-image: url(https://image.shutterstock.com/image-photo/text-portfolio-on-brown-paper-260nw-387456811.jpg);
+    background-position: -6rem .1rem;
+    background-size: 160%;
+}
+
+.project-item p{
+    color:rgb(50, 119, 238);
+    margin-top:.5rem;
+    font-size: 1.4rem;
+    padding:1rem;
+    text-shadow: .1rem .05rem 0 rgb(16, 16, 16);
+    transition:.3s ease;
+}
+.project-item:hover p{
+    color:white;
+    text-shadow: 0 .7rem 1rem black;
+}
+
+/* About section */
+
+.about-container{
+    width:100vw;
+    min-height:100vh;
+    height: max-content;
+    background-color: rgb(0, 123, 255);
+}
+.about-container h1{
+    color:white;
+    text-align: center;
+    padding-top:7rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: .2rem;
+}
+.about-wrapper{
+    margin:0 auto;
+    padding:2rem;
+    width:80vw;
+}
+.about-wrapper p{
+    color:rgb(0, 0, 0);
+    text-align: justify;
+    text-indent: 5rem;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    letter-spacing: .05rem;
+}
+
+/* Resume section */
+
+
+.resume-container{
+    width:100vw;
+    min-height:100vh;
+    height: max-content;
+    background-color: rgb(43, 43, 45);
+    display:flex;
+    flex-direction: column;
+}
+.resume-container h1{
+    color:white;
+    text-align: center;
+    padding-top:4rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: .2rem;
+}
+.resume-wrapper{
+    padding-bottom:1rem;
+}
+.resume-wrapper img{
+    max-width:45%;
+    display:block;
+    margin:0 auto;
+    box-shadow: 0 0 .2rem .1rem white;
+    transition: .5s ease;
+}
+.resume-wrapper img:hover{
+    transform: scale(1.02);
+}
+
+/* Contact section */
+
+.contact-container{
+    width:100vw;
+    min-height:100vh;
+    height: max-content;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(28, 69, 231);
+}
+.contact-container h1{
+    color:white;
+    text-align: center;
+    padding-top:4rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: .2rem;
+}
+.contact-form{
+    width:fit-content;
+    height:max-content;
+    background-color: rgba(245, 245, 220, 0.719);
+    padding:2rem 5rem;
+}
+.form-control{
+    outline:.1rem solid rgba(68, 63, 63, 0.649);
+}
+.contact-container p{
+    color:rgb(200, 196, 196);
+}
+.contact-container p:first-of-type{
+    margin-top:.5rem;
+}
+.social-media-container{
+    padding-bottom: 1rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    gap:1.5rem;
+}
+.icons{
+    width:2rem;
+}
+.icons img{
+    width:100%;
+}
