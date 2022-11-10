@@ -39,7 +39,8 @@ body{
         width:95vw !important;
     }
     .about-wrapper p{
-        font-size: 1rem;
+        font-size: .95rem !important;
+        line-height: 1.9rem !important;
     }
     .resume-wrapper img{
         width:80% !important;
@@ -351,6 +352,17 @@ body{
 .form-control{
     outline:.1rem solid rgba(68, 63, 63, 0.649);
 }
+#notification{
+    font-size: .8rem;
+    margin-bottom:.5rem;
+    color:red;
+}
+#submit-response{
+    font-size: .9rem;
+    text-align: center;
+    color:rgb(31, 82, 248);
+}
+
 .contact-container p{
     color:rgb(200, 196, 196);
 }
