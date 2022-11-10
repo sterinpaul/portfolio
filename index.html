@@ -172,21 +172,26 @@
         </div>
       </section>
 
+
       <!-- Contact section -->
       <section>
         <div class="contact-container" id="contact">
           <h1>Con<span class="span-letter">t</span>act</h1>
+
+
+          <!-- Form -->
+
           <div class="contact-form">
             <form>
               <!-- Name input -->
               <div class="form-outline mb-4">
-                <input type="text" id="form4Example1" class="form-control" />
+                <input type="text" id="form4Example1" class="form-control" onblur="nameCheck()" />
                 <label class="form-label" for="form4Example1">Name</label>
               </div>
             
               <!-- Email input -->
               <div class="form-outline mb-4">
-                <input type="email" id="form4Example2" class="form-control" />
+                <input type="email" id="form4Example2" class="form-control" onblur="emailCheck() "/>
                 <label class="form-label" for="form4Example2">Email address</label>
               </div>
             
@@ -203,11 +208,16 @@
                   Send me a copy of this message
                 </label>
               </div>
-            
+              <label id="notification"></label>
               <!-- Submit button -->
-              <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
+              <button type="submit" class="btn btn-primary btn-block mb-4" onclick="submitResponse()">Send</button>
+              <label id="submit-response"></label>
             </form>
           </div>
+
+
+          <!-- Social media contact -->
+
           <p>Keep in touch</p>
           <p>Mob: +91 9895815583</p>
           <div class="social-media-container">
