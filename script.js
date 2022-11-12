@@ -1,8 +1,8 @@
 let nameValue = false;
 let emailValue = false;
 function nameCheck(){
-    let nameVal = document.getElementById("form4Example1").value;
-    const regex=/^[a-zA-Z ]*$/i;
+    let nameVal = document.getElementById("form-name").value;
+    const regex=/^[a-zA-Z][a-zA-Z ]+$/i;
     if(nameVal.length < 3 || nameVal.length > 20){
         document.getElementById("notification").innerHTML = "* Enter Valid name";
         nameValue = false;
@@ -19,7 +19,7 @@ function nameCheck(){
 }
 
 function emailCheck(){
-    let emailVal = document.getElementById("form4Example2").value;
+    let emailVal = document.getElementById("form-email").value;
     if(emailVal.length < 1){
         if(nameValue){
             document.getElementById("notification").innerHTML = "* Enter Valid email id";
@@ -32,10 +32,15 @@ function emailCheck(){
 }
 
 function submitResponse(){
+    
     if(nameValue && emailValue){
         document.getElementById("submit-response").innerHTML = "Thank you for the response";
+        
     }else{
         document.getElementById("submit-response").innerHTML = "";
         document.getElementById("notification").innerHTML = "* Enter Valid input";
     }
+    setTimeout(function(){
+        window.location.reload();
+     }, 2000);
 }
