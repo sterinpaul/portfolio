@@ -8,6 +8,7 @@ body{
     width:100vw;
     height:100vh;
     background-color: gray;
+    overflow-x: hidden;
 }
 .navbar{
     box-shadow: none !important;
@@ -19,7 +20,9 @@ body{
     color: rgb(9, 83, 241) !important;
     text-shadow: 0 0 1rem white,0 0 1rem white,0 0 1rem white,0 0 1rem white;
 }
-@media (max-width:990px) {
+
+
+@media only screen and (max-width:990px) {
     .navbar-nav{
       background: rgb(108, 107, 107);
       display:inline-block;
@@ -38,15 +41,11 @@ body{
     .about-wrapper{
         width:95vw !important;
     }
-    .about-wrapper p{
-        font-size: .95rem !important;
-        line-height: 1.9rem !important;
-    }
     .resume-wrapper img{
         width:80% !important;
     }
-  }
-
+}
+ 
 
 /* Home section */
 
@@ -58,7 +57,7 @@ body{
     background-image: linear-gradient(40deg,rgb(41, 39, 39),rgb(125, 121, 121));
 }
 .name-container{
-    width:80vw;
+    width:80%;
     height:60vh;
     background-color: rgb(211, 209, 209);
     display:flex;
@@ -89,7 +88,6 @@ body{
 .services-container{
     width:100vw;
     min-height:100vh;
-    height: max-content;
     background-color: rgb(66, 94, 207);
 }
 .services-container h1{
@@ -116,7 +114,8 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width:17rem;
+    max-width:15rem;
+    overflow: hidden;
     padding:0 1rem;
     background-color:rgb(218, 213, 213);
     cursor: pointer;
@@ -132,7 +131,7 @@ body{
 }
 .service-item h2{
     font-weight: 100;
-    max-width:11rem;
+    width:8rem;
 }
 .service-img-container{
     width:17rem;
@@ -167,28 +166,28 @@ body{
 }
 
 /* Projects section */
-
 .projects-container{
     width:100vw;
     min-height:100vh;
     height: max-content;
+    display:flex;
+    flex-flow: column;
+    justify-content: space-evenly;
     background-color: rgb(87, 88, 89);
 }
 .projects-container h1{
     color:white;
     text-align: center;
-    padding-top:4rem;
     text-transform: uppercase;
     font-weight: 200;
     letter-spacing: .2rem;
 }
 .project-wrapper{
-    width:100vw;
-    padding:5rem 0;
     display:flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap:1rem;
 }
 .project-wrapper a{
     text-decoration: none;
@@ -197,12 +196,10 @@ body{
     display:flex;
     flex-direction: column;
     align-items: center;
-    padding:2rem;
-    border-radius: .5rem;
     /* box-shadow: 0 0 .1rem .3rem white; */
 }
 .project-img-container{
-    width:15rem;
+    width:12rem;
     aspect-ratio: 1;
     overflow: hidden;
     border-radius: 50%;
@@ -236,7 +233,7 @@ body{
 }
 #calculator{
     background-image: url(https://www.thecalculatorsite.com/images/facebook-share-images/homepage.jpg);
-    background-position: -4.2rem;
+    background-position: -1.5rem;
 }
 #portfolio{
     background-image: url(https://image.shutterstock.com/image-photo/text-portfolio-on-brown-paper-260nw-387456811.jpg);
@@ -344,24 +341,61 @@ body{
     letter-spacing: .2rem;
 }
 .contact-form{
-    width:fit-content;
-    height:max-content;
+    width:100%;
+    max-width:25rem;
+    display:flex;
+    flex-flow:column;
     background-color: rgba(245, 245, 220, 0.719);
-    padding:2rem 5rem;
+    padding:1.5rem 1rem;
 }
-.form-control{
-    outline:.1rem solid rgba(68, 63, 63, 0.649);
+.form-field-container{
+    display:flex;
+    flex-flow: column;
+    margin-top:.5rem;
+    padding:0 10%;
 }
+
+.form-input{
+    line-height: 2rem;
+    border:1px solid rgb(131, 130, 130);
+    border-radius: .2rem;
+    background-color: transparent;
+    text-indent: .3rem;
+    outline:none;
+}
+.form-input:focus{
+    border:1px solid blue;
+}
+.submit-button{
+    border:1px solid rgb(187, 194, 205);
+    background-color: rgb(45, 119, 247);
+    color:white;
+    font-size: .9rem;
+    padding: .5rem;
+    border-radius: .3rem;
+    width:80%;
+    margin:0 auto;
+}
+.submit-button:hover{
+    background-color: rgb(41, 102, 232);
+    box-shadow: 0 .2rem .5rem 0  rgba(0, 0, 0, 0.255);
+}
+
 #notification{
+    height:1rem;
     font-size: .8rem;
-    margin-bottom:.5rem;
+    margin:.5rem;
+    text-align: center;
     color:red;
 }
 #submit-response{
+    height:1rem;
     font-size: .9rem;
     text-align: center;
     color:rgb(31, 82, 248);
+    padding: 1rem;
 }
+
 
 .contact-container p{
     color:rgb(200, 196, 196);
