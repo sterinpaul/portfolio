@@ -15,6 +15,7 @@ body{
 }
 .navbar-nav > li > a{
     transition:.3s ease;
+    text-shadow: .1rem .05rem 0 rgb(16, 16, 16);
 }
 .navbar-nav > li > a:hover, .navbar-nav > li > a:focus{
     color: rgb(9, 83, 241) !important;
@@ -44,9 +45,6 @@ body{
     .resume-wrapper img{
         width:80% !important;
     }
-}
-.nav-item > a {
-    text-shadow: .1rem .05rem 0 rgb(16, 16, 16);
 }
 
 /* Home section */
